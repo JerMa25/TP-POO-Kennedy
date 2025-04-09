@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.myproperty.createAccountController"
+            prefHeight="400.0" prefWidth="600.0">
+    <Label text="Username:" layoutX="50" layoutY="60"/>
+    <TextField fx:id="userNameField"
+               layoutX="150" layoutY="60"
+               prefWidth="200"
+               promptText="Enter username"/>
+    <Label text="Date of birth:" layoutX="50" layoutY="100"/>
+    <TextField fx:id="dateOfBirthField"
+               layoutX="150" layoutY="100"
+               prefWidth="200"
+               promptText="JJ/MM/AAAA"/>
+    <Label text="Town:" layoutX="50" layoutY="140"/>
+    <TextField fx:id="town"
+               layoutX="150" layoutY="140"
+               prefWidth="200"
+               promptText="Enter town"/>
+    <Label text="Quarter:" layoutX="50" layoutY="180"/>
+    <TextField fx:id="quarter"
+               layoutX="150" layoutY="180"
+               prefWidth="200"
+               promptText="Enter quarter"/>
+    <Label text="Email:" layoutX="50" layoutY="220"/>
+    <TextField fx:id="email"
+               layoutX="150" layoutY="220"
+               prefWidth="200"
+               promptText="Enter email"/>
+    <Label text="Tel:" layoutX="50" layoutY="260"/>
+    <TextField fx:id="phoneNumber"
+               layoutX="150" layoutY="260"
+               prefWidth="200"
+               promptText="Enter tel"/>
+    <Label text="Gender:" layoutX="50" layoutY="300"/>
+    <ComboBox fx:id="gender"
+              layoutX="150" layoutY="300"
+              prefWidth="200"
+    />
+
+
+
+
+</AnchorPane>

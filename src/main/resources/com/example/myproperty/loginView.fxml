@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.myproperty.loginController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <Label text="Username:" layoutX="50" layoutY="60"/>
+    <TextField fx:id="userNameTextField"
+               layoutX="150" layoutY="60"
+               prefWidth="200"
+               promptText="Enter username"/>
+
+    <Label text="Password:" layoutX="50" layoutY="110"/>
+    <PasswordField fx:id="passwordTextField"
+                   layoutX="150"
+                   layoutY="110"
+                   prefWidth="200"
+                   promptText="Enter password"/>
+    <Button text="connect" onAction="#onConnectButtonClick" layoutX="150" layoutY="160"/>
+</AnchorPane>
