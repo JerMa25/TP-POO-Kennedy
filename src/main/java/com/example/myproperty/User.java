@@ -12,6 +12,8 @@ public class User {
     private String phoneNumber;
     private String gender;
 
+    public User(){};
+
     public int getId() {
         return id;
     }

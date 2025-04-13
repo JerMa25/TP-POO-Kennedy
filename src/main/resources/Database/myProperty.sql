@@ -10,7 +10,8 @@ CREATE TABLE IF NOT EXISTS Utilisateur (
 	quartier VARCHAR(20),
     email VARCHAR(100),
     tel_number VARCHAR(20),
-    gender ENUM("Masculin","Feminin")
+    gender ENUM("Masculin","Feminin"),
+    mot_de_passe VARCHAR(100)
 );
 
 CREATE TABLE IF NOT EXISTS stolenPeripheral (
@@ -20,7 +21,7 @@ CREATE TABLE IF NOT EXISTS stolenPeripheral (
     modele VARCHAR(100),
     processeur VARCHAR(100) ,-- Ordi & Tel
     systeme_exploitation VARCHAR(100),
-	addresseMac VARCHAR(100),
+	adresseMac VARCHAR(100),
     ram INT,
     stockage INT,
     vitesse_max INT, -- Modem

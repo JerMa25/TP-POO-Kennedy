@@ -9,6 +9,7 @@ module com.example.myproperty {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires java.sql;
 
     opens com.example.myproperty to javafx.fxml;
     exports com.example.myproperty;

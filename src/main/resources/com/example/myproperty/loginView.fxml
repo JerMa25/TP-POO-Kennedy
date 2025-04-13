@@ -10,13 +10,13 @@
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.example.myproperty.loginController"
-            prefHeight="400.0" prefWidth="600.0">
+            prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css">
 
-    <Label text="Username:" layoutX="50" layoutY="60"/>
-    <TextField fx:id="userNameTextField"
+    <Label text="ID:" layoutX="50" layoutY="60"/>
+    <TextField fx:id="idTextField"
                layoutX="150" layoutY="60"
                prefWidth="200"
-               promptText="Enter username"/>
+               promptText="Enter ID"/>
 
     <Label text="Password:" layoutX="50" layoutY="110"/>
     <PasswordField fx:id="passwordTextField"
@@ -25,4 +25,5 @@
                    prefWidth="200"
                    promptText="Enter password"/>
     <Button text="connect" onAction="#onConnectButtonClick" layoutX="150" layoutY="160"/>
+    <Button text="back" onAction="#onBackButtonClick" layoutX="250" layoutY="160"/>
 </AnchorPane>

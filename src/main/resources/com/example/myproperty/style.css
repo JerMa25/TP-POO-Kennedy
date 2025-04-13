@@ -1,0 +1,16 @@
+VBox{
+    -fx-background-color : blue;
+}
+AnchorPane{
+    -fx-background-color : blue;
+}
+Button{
+    -fx-font-weight : bold;
+    -fx-text-fill : blue;
+    -fx-text-size : 40px;
+}
+Label{
+    -fx-font-weight : bold;
+    -fx-text-fill : white;
+    -fx-text-size : 40px;
+}
