@@ -28,12 +28,12 @@ CREATE TABLE IF NOT EXISTS stolenPeripheral (
     FOREIGN KEY (utilID) REFERENCES Utilisateur(id)
 );
 
-CREATE TABLE IF NOT EXISTS declaredPeripheral (
+CREATE TABLE IF NOT EXISTS declaredFoundPeripheral (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    finderID INT,
-    stolenObjID INT,
-    modele VARCHAR(100),
-    reportDate DATE NOT NULL,
+    finderID INT NOT NULL,
+    stolenObjID INT NOT NULL,
+    foundDate DATE,
+    reportDate DATETIME DEFAULT CURRENT_TIMESTAMP,
     location VARCHAR(100),
     additionalDesc TEXT,
     FOREIGN KEY (finderID) REFERENCES Utilisateur(id),

@@ -11,51 +11,46 @@
             fx:controller="com.example.myproperty.DeclarationController"
             prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css">
     <Label text="ENTRER LES INFORMATIONS DE L'OBJET VOLÉ" layoutX="100" layoutY="40"/>
-    <Label text="ID Propriétaire:" layoutX="50" layoutY="80"/>
-    <TextField fx:id="utilIDField"
+    <Label text="Marque:" layoutX="50" layoutY="80"/>
+    <TextField fx:id="marqueField"
                layoutX="250" layoutY="80"
                prefWidth="200"
-               promptText="Enter id propriétaire (obligatoire)"/>
-    <Label text="Marque:" layoutX="50" layoutY="120"/>
-    <TextField fx:id="marqueField"
+               promptText="Enter marque (obligatoire)"/>
+    <Label text="Modèle:" layoutX="50" layoutY="120"/>
+    <TextField fx:id="modeleField"
                layoutX="250" layoutY="120"
                prefWidth="200"
-               promptText="Enter marque (obligatoire)"/>
-    <Label text="Modèle:" layoutX="50" layoutY="160"/>
-    <TextField fx:id="modeleField"
+               promptText="Enter modèle (obligatoire)"/>
+    <Label text="Processeur:" layoutX="50" layoutY="160"/>
+    <TextField fx:id="processeurField"
                layoutX="250" layoutY="160"
                prefWidth="200"
-               promptText="Enter modèle (obligatoire)"/>
-    <Label text="Processeur:" layoutX="50" layoutY="200"/>
-    <TextField fx:id="processeurField"
+               promptText="Enter processor details"/>
+    <Label text="Système d'Exploitation:" layoutX="50" layoutY="200"/>
+    <TextField fx:id="osField"
                layoutX="250" layoutY="200"
                prefWidth="200"
-               promptText="Enter processor details"/>
-    <Label text="Système d'Exploitation:" layoutX="50" layoutY="240"/>
-    <TextField fx:id="osField"
+               promptText="Enter os name"/>
+    <Label text="Adresse MAC:" layoutX="50" layoutY="240"/>
+    <TextField fx:id="adressemacField"
                layoutX="250" layoutY="240"
                prefWidth="200"
-               promptText="Enter os name"/>
-    <Label text="Adresse MAC:" layoutX="50" layoutY="280"/>
-    <TextField fx:id="adressemacField"
+               promptText="Enter adresse MAC (obligatoire)"/>
+    <Label text="RAM (en Go):" layoutX="50" layoutY="280"/>
+    <TextField fx:id="ramField"
                layoutX="250" layoutY="280"
                prefWidth="200"
-               promptText="Enter adresse MAC (obligatoire)"/>
-    <Label text="RAM:" layoutX="50" layoutY="320"/>
-    <TextField fx:id="ramField"
+               promptText="Enter ram details"/>
+    <Label text="Stockage (en Go):" layoutX="50" layoutY="320"/>
+    <TextField fx:id="stockageField"
                layoutX="250" layoutY="320"
                prefWidth="200"
-               promptText="Enter ram details"/>
-    <Label text="Stockage:" layoutX="50" layoutY="360"/>
-    <TextField fx:id="stockageField"
+               promptText="Enter stockage"/>
+    <Label text="Vitesse max (en Hz):" layoutX="50" layoutY="360"/>
+    <TextField fx:id="vitesseMaxField"
                layoutX="250" layoutY="360"
                prefWidth="200"
-               promptText="Enter stockage"/>
-    <Label text="Vitesse max:" layoutX="50" layoutY="400"/>
-    <TextField fx:id="vitesseMaxField"
-               layoutX="250" layoutY="400"
-               prefWidth="200"
                promptText="Enter vitesse max"/>
-    <Button text="confirmer" onAction="#onConfirmButtonClick" layoutX="150" layoutY="440"/>
-    <Button text="annuler" onAction="#onUndoButtonClick" layoutX="300" layoutY="440"/>
+    <Button text="confirmer" onAction="#onConfirmButtonClick" layoutX="150" layoutY="400"/>
+    <Button text="annuler" onAction="#onUndoButtonClick" layoutX="300" layoutY="400"/>
 </AnchorPane>

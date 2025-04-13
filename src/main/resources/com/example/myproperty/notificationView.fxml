@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.myproperty.notificationController"
+            prefHeight="400.0" prefWidth="600.0">
+    <VBox fx:id="messageContainer" prefHeight="350.0" prefWidth="550.0" layoutX="10" spacing="10.0">
+    </VBox>
+    <Button fx:id="backButton" text="back" onAction="#onBackButtonClick" layoutX="500" layoutY="10"/>
+</AnchorPane>

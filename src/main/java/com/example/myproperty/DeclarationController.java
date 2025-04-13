@@ -19,7 +19,6 @@ public class DeclarationController {
     public TextField ramField;
     public TextField stockageField;
     public TextField vitesseMaxField;
-    public TextField utilIDField;
 
     private void showAlert(Alert.AlertType type, String title, String content) {
         Alert alert = new Alert(type);
@@ -34,7 +33,7 @@ public class DeclarationController {
     }
 
     public void onConfirmButtonClick(ActionEvent actionEvent) {
-        String utilID = utilIDField.getText().trim();
+        String utilID = userSession.getInstance().getUserId();
         String marque = marqueField.getText().trim();
         String modele = modeleField.getText().trim();
         String processeur = processeurField.getText().trim();

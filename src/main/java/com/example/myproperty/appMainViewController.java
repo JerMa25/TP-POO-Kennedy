@@ -12,4 +12,8 @@ public class appMainViewController {
     public void onFoundButtonClick(ActionEvent actionEvent) throws IOException {
         HelloApplication.setRoot("selectFoundView");
     }
+
+    public void onMessageBoxButtonClick(ActionEvent actionEvent) throws IOException {
+        HelloApplication.setRoot("notificationView");
+    }
 }

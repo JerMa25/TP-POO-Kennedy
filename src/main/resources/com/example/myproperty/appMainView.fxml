@@ -10,6 +10,7 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.myproperty.appMainViewController"
             prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css">
-    <Button text="Déclarer un vol" onAction="#onTheftReportButtonClick" layoutX="150" layoutY="380"/>
-    <Button text="Retrouvé?" onAction="#onFoundButtonClick" layoutX="400" layoutY="380"/>
+    <Button text="Déclarer un vol" onAction="#onTheftReportButtonClick" layoutX="230" layoutY="260" prefWidth="150"/>
+    <Button text="Retrouvé?" onAction="#onFoundButtonClick" layoutX="230" layoutY="380" prefWidth="150"/>
+    <Button text="Message Box" onAction="#onMessageBoxButtonClick" layoutX="230" layoutY="320" prefWidth="150"/>
 </AnchorPane>

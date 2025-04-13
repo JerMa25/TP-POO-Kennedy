@@ -11,6 +11,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import static com.example.myproperty.alertBox.showAlert;
+
 public class createAccountController {
     public TextField userNameField;
     public TextField dateOfBirthField;
@@ -25,14 +27,6 @@ public class createAccountController {
     public void initialize(){
         genderComboBox.getItems().addAll("Masculin","Feminin");
         genderComboBox.setValue("Masculin");
-    }
-
-    private void showAlert(Alert.AlertType type, String title, String content) {
-        Alert alert = new Alert(type);
-        alert.setTitle(title);
-        alert.setHeaderText(null); // Pas de sous-titre
-        alert.setContentText(content);
-        alert.showAndWait();
     }
 
     public void onSaveButtonClick(ActionEvent actionEvent) {
@@ -71,7 +65,7 @@ public class createAccountController {
                         if (generatedKeys.next()) {
                             int userId = generatedKeys.getInt(1); // récupère l'id généré
                             showAlert(Alert.AlertType.INFORMATION, "Succès", "Utilisateur enregistré avec succès !\nVotre ID est : " + userId);
-                            HelloApplication.setRoot("appMainView");
+                            HelloApplication.setRoot("loginView");
                         }
                     } catch (IOException e) {
                         throw new RuntimeException(e);

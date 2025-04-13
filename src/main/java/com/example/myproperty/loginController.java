@@ -12,22 +12,22 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import static com.example.myproperty.alertBox.showAlert;
+
 public class loginController {
 
+    private String id;
     public PasswordField passwordTextField;
     public TextField idTextField;
 
-    private void showAlert(Alert.AlertType type, String title, String content) {
-        Alert alert = new Alert(type);
-        alert.setTitle(title);
-        alert.setHeaderText(null); // Pas de sous-titre
-        alert.setContentText(content);
-        alert.showAndWait();
-    }
+    public loginController(){}
+
+    public String getId() { return id; }
+    public void setId(String id) { this.id = id; }
 
     @FXML
     public void onConnectButtonClick(ActionEvent actionEvent) throws SQLException {
-        String id = idTextField.getText().trim();
+        id = idTextField.getText().trim();
         String password = passwordTextField.getText().trim();
 
         if (id.isEmpty() || password.isEmpty()) {
@@ -39,11 +39,11 @@ public class loginController {
             String sql = "SELECT mot_de_passe FROM Utilisateur WHERE id = ?";
             try (PreparedStatement statement = connection.prepareStatement(sql)) {
                 statement.setString(1, id);
-
                 ResultSet resultSet = statement.executeQuery();
                 if (resultSet.next()) {
                     String PASSWORD = resultSet.getString("mot_de_passe");
                     if (PASSWORD.equals(password)) {
+                        userSession.getInstance().setUserId(id); // Store ID in session
                         HelloApplication.setRoot("appMainView");
                     } else {
                         showAlert(Alert.AlertType.ERROR, "Erreur", "Mot de passe incorrect");

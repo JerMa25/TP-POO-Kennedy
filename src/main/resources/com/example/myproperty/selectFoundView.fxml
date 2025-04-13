@@ -10,14 +10,30 @@
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.example.myproperty.selectFoundController"
             prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css">
-    <TableView fx:id="lostPeripheralsTableView" layoutX="20" layoutY="20" prefWidth="900" prefHeight="900">
+    <Label text="LOST PERIPHERALS LIST" layoutX="70" layoutY="10"/>
+    <TableView fx:id="lostPeripheralsTableView" layoutX="20" layoutY="30" prefWidth="900" prefHeight="650">
         <columns>
+            <TableColumn fx:id="stolenObjID" text="ID" prefWidth="20"/>
             <TableColumn fx:id="ownerName" text="Nom Propriétaire" prefWidth="150"/>
             <TableColumn fx:id="marque" text="Marque" prefWidth="150"/>
             <TableColumn fx:id="modele" text="Modèle" prefWidth="250"/>
             <TableColumn fx:id="adresseMac" text="Adresse MAC" prefWidth="250"/>
         </columns>
     </TableView>
-    <Button text="confirmer" onAction="#onConfirmButtonClick" layoutX="20" layoutY="950"/>
-
+    <Label text="found Date (obligatoire):" layoutX="50" layoutY="690"/>
+    <TextField fx:id="foundDateField"
+               layoutX="300" layoutY="690"
+               prefWidth="300" promptText="YYYY-MM-DD"/>
+    <Label text="found Location (obligatoire):" layoutX="50" layoutY="730"/>
+    <TextField fx:id="foundLocationField"
+               layoutX="300" layoutY="730"
+               prefWidth="300"
+               promptText="Town-Quarter"/>
+    <Label text="additional description:" layoutX="50" layoutY="770"/>
+    <TextField fx:id="additionalDescField"
+               layoutX="300" layoutY="770"
+               promptText="color, size, shape,...etc"
+               prefWidth="300" prefHeight="50"/>
+    <Button fx:id="confirmButton" text="confirmer" onAction="#onConfirmButtonClick" disable="true" layoutX="20" layoutY="950"/>
+    <Button fx:id="backButton" text="back" onAction="#onBackButtonClick" layoutX="140" layoutY="950"/>
 </AnchorPane>
